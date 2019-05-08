@@ -12,3 +12,4 @@ Set options in Makefile, then:
 - ```terraform output --module=linux```
 - ```make destroy``` when done
 
+#### Credits: Official templates and many parts from rcarmo
