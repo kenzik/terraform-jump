@@ -1,4 +1,4 @@
-## terraform configs for basic linux/jump/whatever server
+## terraform configs for basic linux/jump/whatever server on Azure
 
 SSH has been hardened with cloud-init. Modify to your liking for your distro. Uncomment the docker installation if you want to containerize the things.
 
