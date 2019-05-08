@@ -16,5 +16,9 @@ export TF_VAR_cloud_config := "init.yml.tpl"
 
 .PHONY: plan apply destroy validate
 
-plan apply destroy validate:
+plan destroy validate:
 	terraform $@
+
+apply:
+	terraform $@
+	terraform output --module=linux
