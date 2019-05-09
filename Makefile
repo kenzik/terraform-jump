@@ -18,7 +18,11 @@ export TF_VAR_cloud_config := "init.yml.tpl"
 
 plan destroy validate:
 	terraform $@
-
 apply:
 	terraform $@
 	terraform output --module=linux
+start:
+	az vm start --resource-group $(TF_VAR_shared_prefix) --name $(TF_VAR_instance_prefix)
+	terraform output --module=linux
+stop:
+	az vm deallocate --resource-group $(TF_VAR_shared_prefix) --name $(TF_VAR_instance_prefix)
